@@ -44,7 +44,7 @@
   <inertial> 
     <origin xyz="0 0 ${wheelRadius}" rpy="0 0 0"/> 
     <mass value="${chassisMass}"/> 
-    <box_inertia m="${chassisMass}" x="${chassisLength}" y="${chassisWidth}" z="${chassisHeight}"/>
+    <xacro:box_inertia m="${chassisMass}" x="${chassisLength}" y="${chassisWidth}" z="${chassisHeight}"/>
   </inertial>
 </link>
 <joint name="fixed" type="fixed">
@@ -71,7 +71,7 @@
   <inertial>
     <origin xyz="${casterRadius-chassisLength/2} 0 ${casterRadius-chassisHeight+wheelRadius}" rpy="0 0 0"/>
     <mass value="${casterMass}"/>
-    <sphere_inertia m="${casterMass}" r="${casterRadius}"/>
+    <xacro:sphere_inertia m="${casterMass}" r="${casterRadius}"/>
   </inertial>
 </link>
 <link name="mybot_left_wheel">
@@ -93,7 +93,7 @@
   <inertial>
     <origin xyz="0 0 0" rpy="0 ${PI/2} ${PI/2}" />
     <mass value="${wheelMass}"/>
-    <cylinder_inertia m="${wheelMass}" r="${wheelRadius}" h="${wheelWidth}"/>
+    <xacro:cylinder_inertia m="${wheelMass}" r="${wheelRadius}" h="${wheelWidth}"/>
   </inertial>
 </link>
 
@@ -136,7 +136,7 @@
   <inertial>
     <origin xyz="0 0 0" rpy="0 ${PI/2} ${PI/2}" />
     <mass value="${wheelMass}"/>
-    <cylinder_inertia m="${wheelMass}" r="${wheelRadius}" h="${wheelWidth}"/>
+    <xacro:cylinder_inertia m="${wheelMass}" r="${wheelRadius}" h="${wheelWidth}"/>
   </inertial>
 </link>
 
